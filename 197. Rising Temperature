@@ -1,0 +1,4 @@
+SELECT t1.id
+FROM WEATHER t1, WEATHER t2
+WHERE t1.RECORDDATE = DATE_ADD(t2.RECORDDATE, INTERVAL 1 DAY)
+      AND t1.temperature > t2.temperature;
